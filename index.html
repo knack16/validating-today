@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" class="form" method="post">
+        <h2>Register</h2>
+        <div class="form-control" onkeyup="checkUserName(username)">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter username" />
+          <small>Error Message</small>
+        </div>
+        <div class="form-control" onkeyup="checkEmail(email)">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" />
+          <small>Error Message</small>
+        </div>
+        <div class="form-control" onkeyup="checkPhoneNumber(phone)">
+            <label for="Number">Phone Number</label>
+            <input type="number" id="phone" placeholder="Enter Phone Number" />
+            <small>Error Message</small>
+          </div>
+        <div class="form-control" onkeyup="checkPassword(password)">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" />
+          <small>Error Message</small>
+        </div>
+        <div class="form-control" onkeyup="checkPasswordsMatch(password,password2)">
+          <label for="password2">Confirm Password</label>
+          <input type="password" id="password2" placeholder="Enter password again" />
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="Date">Date</label>
+          <input type="date" id="date" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31">
+        </div>
+        <button>Submit</button>
+      </form>
+      <p>Already Have Account<span><a href="login.html">Login</a></span></p>
+    </div>
+    <div>
+        <table id="display">
+            <tr >
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+            </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
